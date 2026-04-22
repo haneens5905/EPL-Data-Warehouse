@@ -1,10 +1,5 @@
 # EPL Data Warehouse & Automated ETL Pipeline
 
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
-![T-SQL](https://img.shields.io/badge/T--SQL-004880?style=flat&logo=databricks&logoColor=white)
-![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat)
-![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
-
 > **Course:** SIS314 Advanced Databases — Cairo University, Faculty of Computers and Artificial Intelligence
 > **Instructor:** Dr. Shaimaa Galal
 
@@ -172,8 +167,8 @@ The Data Warehouse follows a **Star Schema** (dimensional model), heavily denorm
                          ┌────────────────────────┐
                          │    FactMatchResults    │
                          │  HomeGoals, AwayGoals  │
-                         │  HomeTeamKey ──► DimTeam│
-                         │  AwayTeamKey ──► DimTeam│
+                         │ HomeTeamKey ──► DimTeam│
+                         │ AwayTeamKey ──► DimTeam│
                          └────────────────────────┘
 ```
 
