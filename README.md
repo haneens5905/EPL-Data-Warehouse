@@ -43,7 +43,7 @@ This project implements a full **Data Warehouse** for the English Premier League
                     ┌─────────────────────┐
                     │  FactMatchResults   │
                     │  (HomeTeam/AwayTeam │
-                    │   both → DimTeam)  │
+                    │   both → DimTeam)   │
                     └─────────────────────┘
 ```
 
