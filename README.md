@@ -6,23 +6,6 @@
 ![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
 
 
----
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Motivation & Business Questions](#motivation--business-questions)
-3. [Data Source](#data-source)
-4. [Architecture & Pipeline](#architecture--pipeline)
-5. [OLTP Source System](#oltp-source-system)
-6. [Star Schema Design](#star-schema-design)
-7. [ETL Pipeline](#etl-pipeline)
-8. [SCD Type 6](#scd-type-6)
-9. [Automation & Alerting](#automation--alerting)
-10. [Repository Structure](#repository-structure)
-11. [How to Run](#how-to-run)
-12. [Proof of Execution](#proof-of-execution)
-13. [Technologies Used](#technologies-used)
 
 ---
 
