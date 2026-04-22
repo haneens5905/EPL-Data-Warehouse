@@ -1,5 +1,30 @@
 # EPL Data Warehouse & Automated ETL Pipeline
 
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![T-SQL](https://img.shields.io/badge/T--SQL-004880?style=flat&logo=databricks&logoColor=white)
+![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat)
+![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
+
+> **Course:** SIS314 Advanced Databases — Cairo University, Faculty of Computers and Artificial Intelligence
+> **Instructor:** Dr. Shaimaa Galal
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Motivation & Business Questions](#motivation--business-questions)
+3. [Data Source](#data-source)
+4. [Architecture & Pipeline](#architecture--pipeline)
+5. [OLTP Source System](#oltp-source-system)
+6. [Star Schema Design](#star-schema-design)
+7. [ETL Pipeline](#etl-pipeline)
+8. [SCD Type 6](#scd-type-6)
+9. [Automation & Alerting](#automation--alerting)
+10. [Repository Structure](#repository-structure)
+11. [How to Run](#how-to-run)
+12. [Proof of Execution](#proof-of-execution)
+13. [Technologies Used](#technologies-used)
 
 ---
 
@@ -118,6 +143,8 @@ The setup script handles:
 - Verifying FK integrity with pre-flight `LEFT JOIN` checks (should return 0 rows)
 - Creating all three foreign key constraints conditionally
 
+![OLTP Diagram](images/OLTP_Diagram.png)
+
 ---
 
 ## Star Schema Design
@@ -147,12 +174,14 @@ The Data Warehouse follows a **Star Schema** (dimensional model), heavily denorm
                          ┌────────────────────────┐
                          │    FactMatchResults    │
                          │  HomeGoals, AwayGoals  │
-                         │ HomeTeamKey ──► DimTeam│
-                         │ AwayTeamKey ──► DimTeam│
+                         │  HomeTeamKey ──► DimTeam│
+                         │  AwayTeamKey ──► DimTeam│
                          └────────────────────────┘
 ```
 
 > Note: `FactMatchResults` uses two foreign keys to `DimTeam` — one for the home team and one for the away team (role-playing dimension).
+
+![Star Schema](images/Star_Schema.png)
 
 ### Dimension Tables
 
