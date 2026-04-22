@@ -5,8 +5,6 @@
 ![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat)
 ![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
 
-> **Course:** SIS314 Advanced Databases — Cairo University, Faculty of Computers and Artificial Intelligence
-> **Instructor:** Dr. Shaimaa Galal
 
 ---
 
@@ -89,7 +87,7 @@ CSV Files (Kaggle)
       │
       ▼
 ┌─────────────────┐
-│  Staging Tables  │  ← Raw NVARCHAR columns absorb dirty CSV data
+│  Staging Tables │  ← Raw NVARCHAR columns absorb dirty CSV data
 │  (stg_*)        │
 └────────┬────────┘
          │  TRY_CAST + ISNULL cleaning
@@ -101,7 +99,7 @@ CSV Files (Kaggle)
          │  usp_DW_Reload_FromSource
          ▼
 ┌─────────────────┐
-│  Data Warehouse  │  ← Star Schema (dw.* schema)
+│  Data Warehouse │  ← Star Schema (dw.* schema)
 │  (dw.*)         │
 └────────┬────────┘
          │
@@ -174,8 +172,8 @@ The Data Warehouse follows a **Star Schema** (dimensional model), heavily denorm
                          ┌────────────────────────┐
                          │    FactMatchResults    │
                          │  HomeGoals, AwayGoals  │
-                         │  HomeTeamKey ──► DimTeam│
-                         │  AwayTeamKey ──► DimTeam│
+                         │ HomeTeamKey ──► DimTeam│
+                         │ AwayTeamKey ──► DimTeam│
                          └────────────────────────┘
 ```
 
