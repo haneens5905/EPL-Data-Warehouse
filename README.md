@@ -5,6 +5,26 @@
 ![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat)
 ![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
 
+> **Course:** SIS314 Advanced Databases — Cairo University, Faculty of Computers and Artificial Intelligence
+> **Instructor:** Dr. Shaimaa Galal
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Motivation & Business Questions](#motivation--business-questions)
+3. [Data Source](#data-source)
+4. [Architecture & Pipeline](#architecture--pipeline)
+5. [OLTP Source System](#oltp-source-system)
+6. [Star Schema Design](#star-schema-design)
+7. [ETL Pipeline](#etl-pipeline)
+8. [SCD Type 6](#scd-type-6)
+9. [Automation & Alerting](#automation--alerting)
+10. [Repository Structure](#repository-structure)
+11. [How to Run](#how-to-run)
+12. [Proof of Execution](#proof-of-execution)
+13. [Technologies Used](#technologies-used)
 
 ---
 
@@ -131,9 +151,7 @@ The setup script handles:
 
 The Data Warehouse follows a **Star Schema** (dimensional model), heavily denormalized to optimize read performance for analytical queries.
 
-```
-
-> Note: `FactMatchResults` uses two foreign keys to `DimTeam` — one for the home team and one for the away team (role-playing dimension).
+Note: `FactMatchResults` uses two foreign keys to `DimTeam` — one for the home team and one for the away team (role-playing dimension).
 
 ![Star Schema](images/Star_Schema.png)
 
@@ -315,6 +333,8 @@ EPL-Data-Warehouse/
 │   └── Assigment1_EPL.pdf          # Full assignment report
 │
 ├── images/
+│   ├── Star_Schema.png             # DW star schema diagram
+│   ├── OLTP_Diagram.png            # OLTP source tables diagram
 │   ├── DW_Tables.png               # SSMS Object Explorer showing all DW tables
 │   ├── ETL_Email_Alert.png         # Success email received from SQL Server
 │   └── SQL_Agent_Job_History.png   # SQL Agent job execution history
