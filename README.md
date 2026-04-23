@@ -5,8 +5,6 @@
 ![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=flat)
 ![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Model-blue?style=flat)
 
-> **Course:** SIS314 Advanced Databases — Cairo University, Faculty of Computers and Artificial Intelligence
-> **Instructor:** Dr. Shaimaa Galal
 
 ---
 
